@@ -1,0 +1,41 @@
+﻿@page "/Compo/Direction/LoadDirection/{handler?}"
+@model Darayas.Maps.Pages.Home.Components.Map.Directions.Compo_LoadDirectionModel
+
+<div class="row">
+    <div class="col-md-12">
+        <button onclick="RemoveDirection()" class="btn btn-link btn-lg"><i class="fa fa-times"></i></button> <hr />
+    </div>
+</div>
+
+<div id="TextBoxs">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>مبدا</label>
+            <input class="form-control TxtLatLng" type="hidden" />
+            <input id="TextSourceAddress" class="form-control TextAddress" />
+        </div>
+        <div class="form-group">
+            <label>مقصد</label>
+            <input class="form-control TxtLatLng" type="hidden" />
+            <input id="TextDistAddress" class="form-control TextAddress" />
+        </div>
+    </div>
+    <div class="col-md-12">
+        <button onclick="Route()" class="btn btn-success">نمایش مسیر</button>
+    </div>
+</div>
+
+<div class="LstRoads">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.TextAddress').autocomplete({
+            source: '/Compo/Direction/LoadDirection/AddressAutoComplete/' + $(this).val(),
+            select: function (event, ui) {
+                $(this).parents('.form-group').find('.TxtLatLng').val(ui.item.id);
+            }
+        });
+    });
+</script>

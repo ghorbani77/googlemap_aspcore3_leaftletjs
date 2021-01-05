@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Pages/Shared/_BaseLayout.cshtml";
+}
+
+<div class="User">
+    <div class="Circle">
+        <img onclick="Login()" class="img-circle @(User.Identity.IsAuthenticated?"Logined":"")" src="~/Main/img/man-300x300.png" />
+    </div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="Info">
+            @((await User.GetUserDetailsAsync()).Name + " "+ (await User.GetUserDetailsAsync()).Family)
+            <span onclick="SignOut()" class="Logout">
+                <i class="fa fa-times"></i>
+            </span>
+        </div>
+    }
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            @RenderBody();
+        </div>
+    </div>
+</div>
+
+@section script{
+    @RenderSection("script", false)
+    <script>
+        function RefreshPage() {
+            location.reload();
+        }
+    </script>
+}

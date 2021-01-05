@@ -1,0 +1,13 @@
+﻿@page "/Compo/SearchPlace/ListSearchPlace"
+@model Darayas.Maps.Pages.Home.Components.Map.SearchPlace.Compo_ListSearchPlaceModel
+
+<div class="ListSearchPlace">
+    <ul>
+        @foreach (var item in Model.Data)
+        {
+            <li onclick="ShowPlace('@item.Lat','@item.Lng','@item.Zoom','@item.ImgName')">
+                @item.Name
+            </li>
+        }
+    </ul>
+</div>

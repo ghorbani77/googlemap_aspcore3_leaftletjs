@@ -1,0 +1,43 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] </title>
+    <meta name="description" content="آموزش کامل و رایگان طراحی نقشه ها با استفاده از Leaflet js در قالب سایت Google Map" />
+    <link rel="canonical" href="https://dotnetlearn.com/fa/Tutorial/Learn-Leaflet-JS-in-GoogleMap-Asp-Net-Core-3" />
+
+    <link href="~/lib/LeafletJS/leaflet.css" rel="stylesheet" />
+    <link href="~/lib/LeafletJsContextMenu/leaflet.contextmenu.css" rel="stylesheet" />
+    <link href="~/lib/leaflet-routing-machine/leaflet-routing-machine.css" rel="stylesheet" />
+
+    <link href="~/lib/Jqueryui/jquery-ui.css" rel="stylesheet" />
+
+    <link href="~/lib/sweet-alert/sweetalert.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+
+    <link href="~/Main/css/Style-shared.css" rel="stylesheet" />
+    <link href="~/Main/css/Style-rtl.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    @RenderBody()
+
+    <!-- Java Scripts File -->
+    <script src="~/lib/Jquery/jquery.min.js"></script>
+    <script src="~/lib/Jqueryui/jquery-ui.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+
+    <script src="~/lib/sweet-alert/sweetalert.min.js"></script>
+
+    <!-- LeafLetJS Script Files -->
+    <script src="~/lib/LeafletJS/leaflet.js"></script>
+    <script src="~/lib/LeafletJsContextMenu/leaflet.contextmenu.js"></script>
+    <script src="~/lib/leaflet-routing-machine/leaflet-routing-machine.js"></script>
+    <script src="~/lib/Leaflet.timezones/L.timezones.js"></script>
+    <script src="~/Main/js/LeafletConfig.js"></script>
+
+    @RenderSection("script", false)
+
+    <script src="~/Main/js/scripts.js"></script>
+</body>
+</html>

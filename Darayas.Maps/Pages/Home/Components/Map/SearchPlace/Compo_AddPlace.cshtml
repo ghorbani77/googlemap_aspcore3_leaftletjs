@@ -1,0 +1,54 @@
+﻿@page "/Compo/SearchPlace/AddPalce"
+@model Darayas.Maps.Pages.Home.Components.Map.SearchPlace.Compo_AddPlaceModel
+
+<div class="modal fade bd-example-modal-lg" id="AddPlaceModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#AddPlaceModal').remove(); $('.modal-backdrop').fadeOut()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="FrmAddPlace">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="Input.Lat" />
+                    <input type="hidden" asp-for="Input.Lng" />
+                    <input type="hidden" asp-for="Input.Zoom" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="Input.CateId"></label>
+                                <select asp-for="Input.CateId" class="form-control">
+                                    @foreach (var item in Model.LstCategoris)
+                                    {
+                                        <option value="@item.Item1">@item.Item2</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <label asp-for="Input.Name"></label>
+                                        <input class="form-control" autocomplete="off" asp-for="Input.Name" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label asp-for="Input.Zoom"></label>
+                                        <input class="form-control" asp-for="Input.Zoom" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="button" onclick="SendForm('FrmAddPlace','/Compo/SearchPlace/AddPalce')" class="btn btn-success">ذخیره</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

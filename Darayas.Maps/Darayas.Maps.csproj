@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-Darayas.Maps-5791812B-9A60-420F-AADC-66562458BD3B</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Darayas.Maps.DAL\Darayas.Maps.DAL.csproj" />
+    <ProjectReference Include="..\Darayas.Maps.Models\Darayas.Maps.Models.csproj" />
+    <ProjectReference Include="..\Darayas.Maps.NLogger\Darayas.Maps.Logger.csproj" />
+    <ProjectReference Include="..\Darayas.Maps.Ul\Darayas.Maps.Ul.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Account\Manage\" />
+    <Folder Include="wwwroot\Main\img\" />
+    <Folder Include="wwwroot\Fonts\" />
+  </ItemGroup>
+
+</Project>

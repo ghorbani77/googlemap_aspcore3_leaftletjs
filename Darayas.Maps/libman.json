@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap-rtl@3.4.0",
+      "files": [ "css/bootstrap-rtl.min.css" ],
+      "destination": "wwwroot/lib/Bootstrap-rtl"
+    },
+    {
+      "library": "jquery@3.5.1",
+      "files": [ "jquery.min.js" ],
+      "destination": "wwwroot/lib/Jquery"
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/lib/Jqueryui"
+    },
+    {
+      "library": "leaflet-routing-machine@3.2.12",
+      "destination": "wwwroot/lib/leaflet-routing-machine"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+﻿body {
+    font-family: Tahoma !important;
+    font-size: 12px !important;
+}
+
+.map {
+    position: fixed !important;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.User {
+    position: fixed;
+    top: 10px;
+    z-index: 100;
+}
+
+    .User .Circle {
+        height: 50px;
+        width: 50px;
+    }
+
+        .User .Circle img {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            -moz-box-shadow: 0px 0px 8px 8px rgba(0,0,0,.1);
+            -webkit-box-shadow: 0px 0px 8px 8px rgba(0,0,0,.1);
+            box-shadow: 0px 0px 8px 8px rgba(0,0,0,.1);
+            cursor: pointer;
+            transition-duration: 500ms;
+            border: 3px solid red;
+            z-index: 10;
+        }
+
+            .User .Circle img.Logined {
+                border: 3px solid green !important;
+            }
+
+            .User .Circle img:hover {
+                filter: grayscale(100%);
+            }
+
+    .User .Info {
+        position: absolute;
+    }
+
+        .User .Info .Logout {
+            top: 10px;
+            position: absolute;
+            cursor: pointer;
+            transition-duration: 500ms;
+        }
+
+            .User .Info .Logout:hover {
+                color: #f65252 !important;
+            }
+
+.leaflet-container .leaflet-control-attribution {
+    font-family: Tahoma;
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.form-control {
+    border-radius: unset !important;
+}
+
+.text-left {
+    text-align: left;
+    direction: ltr;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.btn {
+    border-radius: unset !important;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+.SideBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    background-color: #fff;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.SideBarBtn {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 23px;
+    height: 48px;
+    background-color: #fff;
+    z-index: 9;
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAQAAAAXDMSnAAAAi0lEQVR4AX3JQcqBURQG4O/+9WNG30D3vOfSDTuQsgcZyBakZANSzMVMBme3zsBI5/VMn4ZKLP5ki1E4tYejWpilxVUtzOEUD68odYmXR5BJNp/4zllXD2phllYvamHmirsayUkfJ5ruHzueTldC08kcT5YOY9xYujqQM03XKXuaLmEtNF1e1Nz89gbL+0do6OEwRwAAAABJRU5ErkJggg==) 7px center/7px 10px no-repeat;
+    transform: rotate(180deg);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.PlaceDetails {
+    position: fixed;
+    bottom: -300px;
+    width: 510px;
+    height: 100px;
+    background-color: #fff;
+    z-index: 8;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    display: block;
+}
+
+
+    .PlaceDetails .PlaceName div {
+        margin: 7px 0;
+    }
+
+    .PlaceDetails .PlaceName .LatLng {
+        color: #9c9c9c !important;
+        transition-duration: 500ms;
+        font-size: 11px;
+    }
+
+        .PlaceDetails .PlaceName .LatLng:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #b7b7b7 !important;
+        }
+
+    .PlaceDetails .direction img {
+        width: 60%;
+        margin-top: 17px;
+        cursor: pointer;
+    }
+
+    .PlaceDetails .direction span {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        background-color: #fff;
+        border: unset;
+        transition-duration: 500ms;
+        cursor: pointer;
+    }
+
+        .PlaceDetails .direction span:hover {
+            color: #f65252;
+        }
+
+
+.LstRoads {
+    overflow-y: scroll;
+    height: 450px;
+    margin-top: 15px
+}
+
+.ListSearchPlace {
+
+}
+
+.ListSearchPlace ul{
+    padding-right:0px;
+}
+
+    .ListSearchPlace ul li{
+        list-style:none;
+        padding:15px 5px;
+        cursor:pointer;
+    }
+
+    .ListSearchPlace ul li:hover{
+        background-color:#f3f3f3;
+
+    }

@@ -1,0 +1,70 @@
+﻿@page "/Home/Index"
+@model Darayas.Maps.Pages.Home.IndexModel
+@{
+    ViewData["Title"] = "آموزش پروژه محور Leaflet JS";
+    Layout = "~/Pages/Shared/_LayoutMain.cshtml";
+}
+
+@Html.AntiForgeryToken()
+<div style="margin:0 -15px;">
+    <div class="SideBar">
+
+    </div>
+    <div class="SideBarBtn"></div>
+    <div class="col-md-4 col-md-offset-4">
+        <div class="PlaceDetails">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="PlcaeImg img-responsive" src="~/Main/img/NoPlaceImg.png" />
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-8 PlaceName">
+                            <div class="bold city">Mahabad</div>
+                            <div class="state">Iran</div>
+                            <div onclick="" class="LatLng">
+                                <span class="Lat">111</span>,
+                                <span class="Lng">111</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 direction">
+                            <img onclick="Direction()" src="~/Main/img/Directions.png" />
+                            <span><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map" class="map"></div>
+</div>
+
+@section script
+{
+    @if (Model.Input.Lat == 0 && Model.Input.Lng == 0)
+    {
+        <script>
+            $(document).ready(function () {
+                if (navigator.geolocation) {
+                    //console.log(navigator.geolocation);
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        LoadMap(position.coords.latitude, position.coords.longitude, 8);
+                        AddMarkerOnClick(new L.latLng(position.coords.latitude, position.coords.longitude));
+                    });
+                } else {
+                    LoadMap('36.767666', '45.707350', 7);
+                }
+            });
+        </script>
+    }
+    else
+    {
+        <script>
+            $(document).ready(function () {
+                LoadMap('@Model.Input.Lat', '@Model.Input.Lng', @Model.Input.Zoom);
+                AddMarkerOnClick(new L.latLng(@Model.Input.Lat,@Model.Input.Lng));
+            });
+        </script>
+    }
+}
+

@@ -1,0 +1,17 @@
+﻿@page "/Compo/Direction/GetLstRoads"
+@model Darayas.Maps.Pages.Home.Components.Map.Directions.Compo_GetLstRoadsModel
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    @(item.Road??item.Text)
+                </td>
+                <td>@item.Time Min</td>
+                <td>@item.Dist m</td>
+            </tr>
+        }
+    </tbody>
+</table>

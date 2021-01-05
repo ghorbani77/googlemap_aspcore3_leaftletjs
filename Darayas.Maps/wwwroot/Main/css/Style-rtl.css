@@ -1,0 +1,29 @@
+﻿@import url('../../lib/bootstrap/css/bootstrap.min.css');
+@import url('../../lib/bootstrap-rtl/css/bootstrap-rtl.min.css');
+
+.User {
+    right: 10px;
+}
+
+    .User .Info {
+        right: 0px;
+        top: 10px;
+        height: 30px;
+        background-color: aliceblue;
+        width: 200px;
+        z-index: 9;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding-right: 60px;
+        padding-top: 5px;
+        font-weight: 700;
+    }
+
+        .User .Info .Logout {
+            
+            left: 10px;
+        }
+
+.leaflet-container .leaflet-control-attribution {
+    direction: rtl;
+}
